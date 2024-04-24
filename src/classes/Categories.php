@@ -1,13 +1,9 @@
 <?php
+
 namespace App\Classes;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-
-
-
 #[ORM\Entity]
 class Categories {
 #[ORM\Id]
@@ -19,6 +15,9 @@ class Categories {
     private string $name;
 #[ORM\Column(type: "string")]
     private string $descriptionCategorie;
+
+    #[ORM\OneToMany(targetEntity: Room::class, mappedBy:'category')]
+    private Collection $room;
     // Constructor
 
     // Setter & Getter

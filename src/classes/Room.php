@@ -1,20 +1,26 @@
 <?php
-namespace App\Classes;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
-use Doctrine\DBAL\Types\Types;
-use Doctrine\ORM\Mapping as ORM;
 
+namespace App\Classes;
+
+use Doctrine\Common\Collections\Collection;
+use Doctrine\ORM\Mapping as ORM;
+#[ORM\Entity]
 class Room {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: "integer")]
-        private int $id;
+    private int $id;
+
     // Property
     #[ORM\Column(type: "string")]
     private string $name;
     #[ORM\Column(type: "integer")]
     private int $number;
+    #[ORM\ManyToOne(targetEntity: Categories::class, inversedBy:'room')]
+    private Categories $category;
+
+    #[ORM\ManyToOne(targetEntity: Hotel::class, inversedBy:'roomList')]
+    private Hotel $hotel;
 
     // Constructor
 

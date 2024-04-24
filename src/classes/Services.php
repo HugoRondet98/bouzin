@@ -1,20 +1,25 @@
 <?php
+
 namespace App\Classes;
-use Doctrine\Common\Collections\ArrayCollection;
+
 use Doctrine\Common\Collections\Collection;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
+#[ORM\Entity]
 class Services {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: "integer")]
-        private int $id;
+    private int $id;
+
     // Property
     #[ORM\Column(type: "string")]
     private string $name;
     #[ORM\Column(type: "string")]
     private string $descriptionService;
+
+    #[ORM\ManyToMany(targetEntity: Hotel::class, mappedBy:'serviceList')]
+    private Collection $hotelList;
 
     // Constructor
 
