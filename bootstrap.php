@@ -17,7 +17,7 @@ $connection = DriverManager::getConnection(
     'driver'    => 'pdo_mysql',
     'user'      => 'root',
     'password'  => '',
-    'dbname'    => 'nomDeLaBase',
+    'dbname'    => 'bouzin',
     'port'      => 3306
   ],
   $config
