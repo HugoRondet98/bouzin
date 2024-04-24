@@ -15,7 +15,7 @@ class Services {
     // Property
     #[ORM\Column(type: "string")]
     private string $name;
-    #[ORM\Column(type: "string")]
+    #[ORM\Column(type:"string")]
     private string $descriptionService;
 
     #[ORM\ManyToMany(targetEntity: Hotel::class, mappedBy:'serviceList')]
