@@ -18,6 +18,13 @@ class Room {
     #[ORM\Column(type : 'integer')]
     private int $number;
 
+    #[ORM\ManyToOne(targetEntity : Categories::class, inversedBy: 'room')]
+    private Categories $category;
+
+    #[ORM\ManyToOne(targetEntity : Hotel::class, inversedBy: 'roomList')]
+    private Hotel $hotel;
+
+
     // Constructor
 
 

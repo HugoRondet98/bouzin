@@ -1,7 +1,9 @@
 <?php
 namespace App\Classes;
 
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\JoinTable;
 
 #[ORM\Entity]
 class Services {
@@ -17,6 +19,9 @@ class Services {
 
     #[ORM\Column()]
     private string $descriptionService;
+
+    #[ORM\ManyToMany(targetEntity : Hotel ::class, mappedBy : 'serviceList')]
+    private Collection $hotelList;
 
     // Constructor
 
