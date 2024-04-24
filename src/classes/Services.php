@@ -4,6 +4,7 @@ namespace App\Classes;
 
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+
 #[ORM\Entity]
 class Services {
     #[ORM\Id]
@@ -16,6 +17,9 @@ class Services {
     private string $name;
     #[ORM\Column(type: "string")]
     private string $descriptionService;
+
+    #[ORM\ManyToMany(targetEntity: Hotel::class, mappedBy:'serviceList')]
+    private Collection $hotelList;
 
     // Constructor
 
