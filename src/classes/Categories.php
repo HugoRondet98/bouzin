@@ -13,8 +13,12 @@ class Categories {
 // Property
 #[ORM\Column(type: "string")]
     private string $name;
+    
 #[ORM\Column(type: "string")]
     private string $descriptionCategorie;
+
+#[ORM\OneToMany(targetEntity: Room::class, mappedBy:'category')]
+private Collection $room;
 
     // Constructor
 

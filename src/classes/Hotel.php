@@ -4,23 +4,42 @@ namespace App\Classes;
 
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\JoinTable;
+
 #[ORM\Entity]
 class Hotel {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: "integer")]
         private int $id;
+
     // Property
     #[ORM\Column(type: "string")]
     private string $name;
-    #[ORM\Column(type: "int")]
-    private int $phone_number;
+
+    #[ORM\Column(type: "integer")]
+    private int $phoneNumber;
+
     #[ORM\Column(type: "string")]
-    private string $street_name;
-    #[ORM\Column(type: "int")]
-    private int $postal_code;
+    private string $streetName;
+
+    #[ORM\Column(type: "integer")]
+    private int $postalCode;
+
     #[ORM\Column(type: "string")]
     private string $city;
+
+
+    #[ORM\OneToMany(targetEntity:Room:: 
+    class, mappedBy:'hotel')]
+    private Collection $roomList;
+
+    #[ORM\ManyToMany(targetEntity:Room:: class, inversedBy:'hotelList')]
+    #[JoinTable(name:'service_hotel')]
+    private Collection $serviceList;
+
+
+
     // Constructor
 
     // Setter & Getter
@@ -50,15 +69,15 @@ class Hotel {
      */
     public function getPhoneNumber(): int
     {
-        return $this->phone_number;
+        return $this->phoneNumber;
     }
 
     /**
      * Set the value of phone_number
      */
-    public function setPhoneNumber(int $phone_number): self
+    public function setPhoneNumber(int $phoneNumber): self
     {
-        $this->phone_number = $phone_number;
+        $this->phoneNumber = $phoneNumber;
 
         return $this;
     }
@@ -68,15 +87,15 @@ class Hotel {
      */
     public function getStreetName(): string
     {
-        return $this->street_name;
+        return $this->streetName;
     }
 
     /**
      * Set the value of street_name
      */
-    public function setStreetName(string $street_name): self
+    public function setStreetName(string $streetName): self
     {
-        $this->street_name = $street_name;
+        $this->streetName = $streetName;
 
         return $this;
     }
@@ -86,15 +105,15 @@ class Hotel {
      */
     public function getPostalCode(): int
     {
-        return $this->postal_code;
+        return $this->postalCode;
     }
 
     /**
      * Set the value of postal_code
      */
-    public function setPostalCode(int $postal_code): self
+    public function setPostalCode(int $postalCode): self
     {
-        $this->postal_code = $postal_code;
+        $this->postalCode = $postalCode;
 
         return $this;
     }
