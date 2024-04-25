@@ -32,7 +32,7 @@
         <a class="nav-link <?php echo $hot; ?>" href="Hotel.php">Hôtels</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <?php echo $room; ?>" href="room.php">Chambres</a>
+        <a class="nav-link <?php echo $room; ?>" href="Room.php">Chambres</a>
       </li>
       <li class="nav-item">
         <a class="nav-link <?php echo $service; ?>" href="services.php">services</a>
