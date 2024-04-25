@@ -7,7 +7,7 @@ use Doctrine\ORM\ORMSetup;
 
 // Create a simple "default" Doctrine ORM configuration for Attributes
 $config = ORMSetup::createAttributeMetadataConfiguration(
-    paths: array(__DIR__."/src"),
+    paths: array(__DIR__."/src/classes"),
     isDevMode: true,
 );
 
@@ -17,7 +17,7 @@ $connection = DriverManager::getConnection(
     'driver'    => 'pdo_mysql',
     'user'      => 'root',
     'password'  => '',
-    'dbname'    => 'nomDeLaBase',
+    'dbname'    => 'bouzin',
     'port'      => 3306
   ],
   $config
