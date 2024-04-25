@@ -1,17 +1,26 @@
 <?php
-$ac = '';
-$cat = '';
-$hot = '';
-$room = 'active';
-$service = '';
-include 'header.php'; ?>
 
-<h1>chambres</h1>
-<?php
+use App\Classes\Categories;
+use App\Classes\Hotel;
+use App\Classes\Room;
+
 require_once dirname(__DIR__) . "/../bootstrap.php";
 require_once dirname(__FILE__) . "/jsonToPhp/index.php";
 
-var_dump($dataPhpRoom);
+$hotelRepository = $entityManager->getRepository(Hotel::class);
+$tableHotel = $hotelRepository->findAll();
 
-?>
-<?php include 'footer.php'; ?>
+$categoriesRepository = $entityManager->getRepository(Categories::class);
+$tableCategories = $categoriesRepository->findAll();
+//var_dump($tableCategories);
+
+
+foreach ($tableHotel as $obj) {
+    foreach ($dataPhpRoom as $object) {
+        $randomId = rand(0, count($tableCategories) - 1);
+        $cat = $tableCategories[$randomId];
+        $rompich = new Room($object->name, $object->numero, $cat, $obj);
+        $entityManager->persist($rompich);
+    }
+}
+$entityManager->flush();

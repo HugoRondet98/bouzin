@@ -19,7 +19,10 @@ class Categories {
     #[ORM\OneToMany(targetEntity: Room::class, mappedBy:'category')]
     private Collection $room;
     // Constructor
-
+public function __construct(string $name, string $descriptionCategorie) {
+    $this->name = $name;
+    $this->descriptionCategorie = $descriptionCategorie;
+}
     // Setter & Getter
 
     // Method

@@ -15,8 +15,8 @@ class Hotel {
     // Property
     #[ORM\Column(type: "string")]
     private string $name;
-    #[ORM\Column(type: "integer")]
-    private int $phoneNumber;
+    #[ORM\Column(type: "string")]
+    private string $phoneNumber;
     #[ORM\Column(type: "string")]
     private string $streetName;
     #[ORM\Column(type: "integer")]
@@ -32,7 +32,13 @@ class Hotel {
     private Collection $serviceList;
 
     // Constructor
-
+    public function __construct(string $name, string $phoneNumber, string $streetName, int $postalCode, string $city ) {
+        $this->name = $name;
+        $this->phoneNumber = $phoneNumber;
+        $this->streetName = $streetName;
+        $this->postalCode = $postalCode;
+        $this->city = $city;
+    }
     // Setter & Getter
 
     // Method
@@ -58,7 +64,7 @@ class Hotel {
     /**
      * Get the value of phoneNumber
      */
-    public function getPhoneNumber(): int
+    public function getPhoneNumber(): string
     {
         return $this->phoneNumber;
     }
@@ -66,7 +72,7 @@ class Hotel {
     /**
      * Set the value of phoneNumber
      */
-    public function setPhoneNumber(int $phoneNumber): self
+    public function setPhoneNumber(string $phoneNumber): self
     {
         $this->phoneNumber = $phoneNumber;
 
