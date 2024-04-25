@@ -1,32 +1,44 @@
 <?php
-
 namespace App\Classes;
 
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+
 #[ORM\Entity]
 class Room {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: "integer")]
-    private int $id;
 
     // Property
-    #[ORM\Column(type: "string")]
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column()]
+    private int $id;
+
+    #[ORM\Column()]
     private string $name;
-    #[ORM\Column(type: "integer")]
+
+    #[ORM\Column(type : 'integer')]
     private int $number;
-    #[ORM\ManyToOne(targetEntity: Categories::class, inversedBy:'room')]
+
+    #[ORM\ManyToOne(targetEntity : Categories::class, inversedBy: 'room')]
     private Categories $category;
 
-    #[ORM\ManyToOne(targetEntity: Hotel::class, inversedBy:'roomList')]
+    #[ORM\ManyToOne(targetEntity : Hotel::class, inversedBy: 'roomList')]
     private Hotel $hotel;
 
-    // Constructor
 
-    // Setter & Getter
-
+    //Constructor
+    public function __construct(string $name, int $number,Categories $category, Hotel $hotel) {
+        $this->name = $name;
+        $this->number = $number;
+        $this->category = $category;
+        $this->hotel = $hotel;
+    }
     // Method
+
+
+
+
+    
+    // Setter & Getter
 
     /**
      * Get the value of name

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +10,11 @@
       .active{border-bottom: 2px solid orange}
     </style>
 </head>
-
+ 
 <body>
-    
-    
    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  
+ 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -26,16 +24,16 @@
         <a class="nav-link <?php echo $ac; ?>" href="index.php">Home </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <?php echo $cat; ?>" href="Categories.php">Catégories</a>
+        <a class="nav-link <?php echo $cat; ?>" href="categories.php">Catégories</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <?php echo $hot; ?>" href="Hotel.php">Hôtels</a>
+        <a class="nav-link <?php echo $hot; ?>" href="hotel.php">Hôtels</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <?php echo $room; ?>" href="Room.php">Chambres</a>
+        <a class="nav-link <?php echo $room; ?>" href="room.php">Chambres</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <?php echo $service; ?>" href="services.php">services</a>
+        <a class="nav-link <?php echo $service; ?>" href="service.php">Services</a>
       </li>
     </ul>
   </div>
