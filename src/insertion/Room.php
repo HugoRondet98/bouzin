@@ -14,9 +14,6 @@ $categoriesRepository = $entityManager->getRepository(Categories::class);
 $tableCategories = $categoriesRepository->findAll();
 //var_dump($tableCategories);
 
-
-
-
 // foreach ($tableHotel as $obj) {
 //     foreach ($dataPhpRoom as $object) {
 //         $randomId = rand(0, count($tableCategories)-1);
