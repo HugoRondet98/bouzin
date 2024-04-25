@@ -1,7 +1,13 @@
 <?php
+$ic='';
+$ih='active';
+$ir='';
+$is='';
 use App\Classes\Hotel;
 use Doctrine\ORM\EntityManager;
- 
+
+include 'header.php';
+
 require_once dirname(__DIR__)."/../bootstrap.php";
 require_once dirname(__FILE__)."/jsonToPhp/index.php";
  

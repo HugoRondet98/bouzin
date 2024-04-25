@@ -1,5 +1,12 @@
-<?php
+<?php 
 
+$ic='active';
+$ih='';
+$ir='';
+$is='';
+
+
+include 'header.php';
 use App\Classes\Categories;
 use Doctrine\ORM\EntityManager;
  
