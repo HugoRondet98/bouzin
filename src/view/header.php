@@ -24,7 +24,7 @@
         <a class="nav-link <?php echo $ac; ?>" href="index.php">Home </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <?php echo $cat; ?>" href="categories.php">Catégories</a>
+        <a class="nav-link <?php echo $cat; ?>" href="category.php">Catégories</a>
       </li>
       <li class="nav-item">
         <a class="nav-link <?php echo $hot; ?>" href="hotel.php">Hôtels</a>

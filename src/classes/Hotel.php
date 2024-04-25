@@ -17,8 +17,8 @@ class Hotel {
     #[ORM\Column()]
     private string $name;
 
-    #[ORM\Column(type : 'integer')]
-    private int $phone_number;
+    #[ORM\Column()]
+    private string $phone_number;
 
     #[ORM\Column()]
     private string $street_name;
@@ -36,10 +36,14 @@ class Hotel {
     #[JoinTable(name: 'service_hotel')]
     private Collection $serviceList;
 
-
-
     // Constructor
-
+    public function __construct(string $name, string $phone_number, string $street_name, int $postal_code, string $city) {
+        $this->name = $name;
+        $this->phone_number = $phone_number;
+        $this->street_name = $street_name;
+        $this->postal_code = $postal_code;
+        $this->city = $city;
+    }
     
     // Method
 
@@ -70,7 +74,7 @@ class Hotel {
     /**
      * Get the value of phone_number
      */
-    public function getPhone_number(): int
+    public function getPhone_number(): string
     {
         return $this->phone_number;
     }

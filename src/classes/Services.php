@@ -24,7 +24,10 @@ class Services {
     private Collection $hotelList;
 
     // Constructor
-
+    public function __construct(string $name, string $descriptionService) {
+        $this->name = $name;
+        $this->descriptionService = $descriptionService;
+    }
 
     // Method
 

@@ -26,7 +26,12 @@ class Room {
 
 
     // Constructor
-
+    public function __construct(string $name, int $number, Categories $category, Hotel $hotel) {
+        $this->name = $name;
+        $this->number = $number;
+        $this->category = $category;
+        $this->hotel = $hotel;
+    }
 
     // Method
 
