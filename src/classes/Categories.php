@@ -2,6 +2,8 @@
 
 namespace App\Classes;
 
+//require '../../bootstrap.php';
+
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity]
@@ -22,6 +24,11 @@ class Categories {
 private Collection $room;
 
     // Constructor
+public function __construct(string $name, string $descriptionCategorie) {
+    $this->name = $name;
+    $this->descriptionCategorie = $descriptionCategorie;
+
+}
 
     // Setter & Getter
 

@@ -19,11 +19,14 @@ class Services {
     #[ORM\Column(type: "string")]
     private string $descriptionService;
 
-    #[ORM\ManyToMany(targetEntity : Hotel:: class, mappedBy:'ServiceList')]
+    #[ORM\ManyToMany(targetEntity : Hotel:: class, mappedBy:'serviceList')]
     private Collection $hotelList;
     
     // Constructor
-
+    public function __construct(string $name, string $descriptionService) {
+        $this->name = $name;
+        $this->descriptionService = $descriptionService;
+    }
     // Setter & Getter
 
     // Method

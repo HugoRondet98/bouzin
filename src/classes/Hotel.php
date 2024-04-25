@@ -17,31 +17,38 @@ class Hotel {
     #[ORM\Column(type: "string")]
     private string $name;
 
-    #[ORM\Column(type: "integer")]
-    private int $phoneNumber;
+    #[ORM\Column(type: "string")]
+    private string $phoneNumber;
 
     #[ORM\Column(type: "string")]
     private string $streetName;
 
-    #[ORM\Column(type: "integer")]
-    private int $postalCode;
+    #[ORM\Column(type: "string")]
+    private string $postalCode;
 
     #[ORM\Column(type: "string")]
     private string $city;
 
 
-    #[ORM\OneToMany(targetEntity:Room:: 
-    class, mappedBy:'hotel')]
+    #[ORM\OneToMany(targetEntity:Room::class,mappedBy:'hotel')]
     private Collection $roomList;
 
-    #[ORM\ManyToMany(targetEntity:Room:: class, inversedBy:'hotelList')]
+    #[ORM\ManyToMany(targetEntity:Services::class,inversedBy:'hotelList')]
     #[JoinTable(name:'service_hotel')]
     private Collection $serviceList;
 
 
 
     // Constructor
-
+    /*public function __construct(string $name, int $phoneNumber, string $streetName, int $postalCode, string $city) {
+        $this->name = $name;
+        $this->phoneNumber = $phoneNumber;
+        $this->streetName = $streetName;
+        $this->postalCode = $postalCode;
+        $this->city = $city;
+    }
+    */
+    
     // Setter & Getter
 
     // Method
@@ -67,7 +74,7 @@ class Hotel {
     /**
      * Get the value of phone_number
      */
-    public function getPhoneNumber(): int
+    public function getPhoneNumber(): string
     {
         return $this->phoneNumber;
     }
@@ -75,7 +82,7 @@ class Hotel {
     /**
      * Set the value of phone_number
      */
-    public function setPhoneNumber(int $phoneNumber): self
+    public function setPhoneNumber(string $phoneNumber): self
     {
         $this->phoneNumber = $phoneNumber;
 
