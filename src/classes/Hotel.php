@@ -18,13 +18,13 @@ class Hotel {
     private string $name;
 
     #[ORM\Column(type : 'string')]
-    private string $phoneNumber;
+    private string $phone_Number;
 
     #[ORM\Column()]
-    private string $streetName;
+    private string $street_Name;
 
     #[ORM\Column(type : 'integer')]
-    private int $postalCode;
+    private int $postal_Code;
 
     #[ORM\Column()]
     private string $city;
