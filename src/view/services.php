@@ -1,11 +1,11 @@
 <?php
 $ac='';
 $cat='';
-$hot='active';
+$hot='';
 $room='';
-$service='';
+$service='active';
 include 'header.php'; ?>
- 
-<h1>Hotel</h1>
- 
+
+<h1>services</h1>
+
 <?php include 'footer.php'; ?>

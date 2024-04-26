@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Classes;
 
 use Doctrine\Common\Collections\Collection;
@@ -8,40 +7,73 @@ use Doctrine\ORM\Mapping\JoinTable;
 
 #[ORM\Entity]
 class Hotel {
+
+    // Property
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column(type: "integer")]
+    #[ORM\Column()]
     private int $id;
-    // Property
-    #[ORM\Column(type: "string")]
+
+    #[ORM\Column()]
     private string $name;
-    #[ORM\Column(type: "string")]
+
+    #[ORM\Column(type : 'string')]
     private string $phoneNumber;
-    #[ORM\Column(type: "string")]
+
+    #[ORM\Column()]
     private string $streetName;
-    #[ORM\Column(type: "integer")]
+
+    #[ORM\Column(type : 'integer')]
     private int $postalCode;
-    #[ORM\Column(type: "string")]
+
+    #[ORM\Column()]
     private string $city;
 
-    #[ORM\OneToMany(targetEntity: Room::class, mappedBy:'hotel')]
+    #[ORM\OneToMany(targetEntity : Room::class, mappedBy : 'hotel')]
     private Collection $roomList;
 
-    #[ORM\ManyToMany(targetEntity: Services::class, inversedBy:'hotelList')]
+    #[ORM\ManyToMany(targetEntity : Services ::class, inversedBy : 'hotelList')]
     #[JoinTable(name: 'service_hotel')]
     private Collection $serviceList;
 
-    // Constructor
-    public function __construct(string $name, string $phoneNumber, string $streetName, int $postalCode, string $city ) {
+
+// Constructor
+    /*public function __construct(string $name, int $phoneNumber, string $streetName, int $postalCode, string $city) {
         $this->name = $name;
         $this->phoneNumber = $phoneNumber;
         $this->streetName = $streetName;
         $this->postalCode = $postalCode;
         $this->city = $city;
     }
+    */
+
+    
+    // Method
+
+
+
+
+
     // Setter & Getter
 
-    // Method
+
+    /**
+     * Get the value of id
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set the value of id
+     */
+    public function setId(int $id): self
+    {
+        $this->id = $id;
+
+        return $this;
+    }
 
     /**
      * Get the value of name
@@ -129,6 +161,42 @@ class Hotel {
     public function setCity(string $city): self
     {
         $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of roomList
+     */
+    public function getRoomList(): Collection
+    {
+        return $this->roomList;
+    }
+
+    /**
+     * Set the value of roomList
+     */
+    public function setRoomList(Collection $roomList): self
+    {
+        $this->roomList = $roomList;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of serviceList
+     */
+    public function getServiceList(): Collection
+    {
+        return $this->serviceList;
+    }
+
+    /**
+     * Set the value of serviceList
+     */
+    public function setServiceList(Collection $serviceList): self
+    {
+        $this->serviceList = $serviceList;
 
         return $this;
     }

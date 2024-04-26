@@ -1,17 +1,19 @@
 <?php
-$ac = '';
-$cat = '';
-$hot = '';
-$room = '';
-$service = 'active';
-include 'header.php'; ?>
+$ic='';
+$ih='';
+$ir='';
+$is='active';
+use App\Classes\Services;
+use Doctrine\ORM\EntityManager;
 
-<h1>services</h1>
-<?php
-require_once dirname(__DIR__) . "/../bootstrap.php";
-require_once dirname(__FILE__) . "/jsonToPhp/index.php";
+include 'header.php';
+require_once dirname(__DIR__)."/../bootstrap.php";
+require_once dirname(__FILE__)."/jsonToPhp/index.php";
 
-var_dump($dataPhpServices);
-
-?>
-<?php include 'footer.php'; ?>
+// foreach ($dataPhpCategories as $object) {
+//     $cat = new Categories();
+//     $cat->setName($object->name);
+//     $cat->setDescriptionCategorie($object->description);
+//     $entityManager->persist($cat);
+// }
+// $entityManager->flush();

@@ -1,35 +1,33 @@
 <?php
-
 namespace App\Classes;
 
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity]
-class Room
-{
+class Room {
 
     // Property
     #[ORM\Id]
     #[ORM\GeneratedValue]
+    
     #[ORM\Column()]
     private int $id;
 
     #[ORM\Column()]
     private string $name;
 
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type : 'integer')]
     private int $number;
 
-    #[ORM\ManyToOne(targetEntity: Categories::class, inversedBy: 'room')]
+    #[ORM\ManyToOne(targetEntity : Categories::class, inversedBy: 'room')]
     private Categories $category;
 
-    #[ORM\ManyToOne(targetEntity: Hotel::class, inversedBy: 'roomList')]
+    #[ORM\ManyToOne(targetEntity : Hotel::class, inversedBy: 'roomList')]
     private Hotel $hotel;
 
 
     //Constructor
-    public function __construct(string $name, int $number, Categories $category, Hotel $hotel)
-    {
+    public function __construct(string $name, int $number,Categories $category, Hotel $hotel) {
         $this->name = $name;
         $this->number = $number;
         $this->category = $category;
@@ -38,6 +36,9 @@ class Room
     // Method
 
 
+
+
+    
     // Setter & Getter
 
     /**
