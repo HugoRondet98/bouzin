@@ -3,7 +3,8 @@ require_once "vendor/autoload.php";
 
 use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\ORMSetup; 
+use Doctrine\ORM\ORMSetup;
+
 // Create a simple "default" Doctrine ORM configuration for Attributes
 $config = ORMSetup::createAttributeMetadataConfiguration(
     paths: array(__DIR__."/src/classes"),
@@ -18,8 +19,8 @@ $connection = DriverManager::getConnection(
     'password'  => '',
     'dbname'    => 'bouzin',
     'port'      => 3306
-],
-$config
+  ],
+  $config
 );
 
 // obtaining the entity manager

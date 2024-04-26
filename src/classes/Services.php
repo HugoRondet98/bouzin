@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Classes;
 
 use Doctrine\Common\Collections\Collection;
@@ -8,28 +7,37 @@ use Doctrine\ORM\Mapping\JoinTable;
 
 #[ORM\Entity]
 class Services {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: "integer")]
-    private int $id;
 
     // Property
-    #[ORM\Column(type: "string")]
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column()]
+    private int $id;
+
+    #[ORM\Column()]
     private string $name;
-    #[ORM\Column(type: "string")]
+
+    #[ORM\Column()]
     private string $descriptionService;
 
-    #[ORM\ManyToMany(targetEntity : Hotel:: class, mappedBy:'serviceList')]
+    #[ORM\ManyToMany(targetEntity : Hotel ::class, mappedBy : 'serviceList')]
     private Collection $hotelList;
-    
+
     // Constructor
-    public function __construct(string $name, string $descriptionService) {
-        $this->name = $name;
-        $this->descriptionService = $descriptionService;
-    }
-    // Setter & Getter
+    // public function __construct(string $name, string $descriptionService) {
+    //     $this->name = $name;
+    //     $this->descriptionService = $descriptionService;
+   
+    // }
+
 
     // Method
+
+
+
+
+
+    // Setter & Getter
 
     /**
      * Get the value of name
