@@ -36,6 +36,9 @@
       <li class="nav-item">
         <a class="nav-link " href="../view/service.php">Services</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link " href="../view/ServiceHotel.php">ServicesHotel</a>
+      </li>
     </ul>
   </div>
 </nav>

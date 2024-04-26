@@ -19,8 +19,6 @@
         }
 
         @keyframes bord {
-
-
             10%,
             45% {
                 border: 3px solid red;

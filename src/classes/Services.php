@@ -23,12 +23,12 @@ class Services {
     #[ORM\ManyToMany(targetEntity : Hotel ::class, mappedBy : 'serviceList')]
     private Collection $hotelList;
 
-    // Constructor
-    // public function __construct(string $name, string $descriptionService) {
-    //     $this->name = $name;
-    //     $this->descriptionService = $descriptionService;
+ 
+    public function __construct(string $name, string $descriptionService) {
+        $this->name = $name;
+        $this->descriptionService = $descriptionService;
    
-    // }
+    }
 
 
     // Method
