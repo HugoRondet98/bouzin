@@ -33,9 +33,7 @@
             80% {
                 border: 25px solid yellow;
             }
-
         }
-
         h5 {
             font-weight: bold;
             text-align: center;
@@ -83,9 +81,6 @@
                 transform: scale(2);
             }
         }
-
-
-
 
         h5 {
             animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) infinite;

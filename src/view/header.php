@@ -52,13 +52,13 @@
         <a class="nav-link <" href="../insertion/Categories.php">insertion>Categories </a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link <" href="/src/insertion/Hotel.php">insertion>Hotel </a>
+        <a class="nav-link <" href="../insertion/Hotel.php">insertion>Hotel </a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link <" href="/src/insertion/Room.php">insertion>Room </a>
+        <a class="nav-link <" href="../insertion/Room.php">insertion>Room </a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link <" href="/src/insertion/services.php">insertion>Services </a>
+        <a class="nav-link <" href="../insertion/services.php">insertion>Services </a>
       </li>
 
 
