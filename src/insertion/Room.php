@@ -1,8 +1,9 @@
 <?php
-$ic='';
-$ih='';
-$ir='active';
-$is='';
+$ic = '';
+$ih = '';
+$ir = 'active';
+$is = '';
+
 use App\Classes\Categories;
 use App\Classes\Hotel;
 use App\Classes\Room;
@@ -15,7 +16,6 @@ $tableHotel = $hotelRepository->findAll();
 
 $categoriesRepository = $entityManager->getRepository(Categories::class);
 $tableCategories = $categoriesRepository->findAll();
-//var_dump($tableCategories);
 
 // foreach ($tableHotel as $obj) {
 //     foreach ($dataPhpRoom as $object) {
@@ -26,3 +26,5 @@ $tableCategories = $categoriesRepository->findAll();
 //     }
 // }
 // $entityManager->flush();
+
+include '../view/footer.php';

@@ -4,6 +4,7 @@ $cat='active';
 $hot='';
 $room='';
 $service='';
+
 include 'header.php'; ?>
  
 <h1>Categories</h1>

@@ -18,13 +18,13 @@ class Hotel {
     private string $name;
 
     #[ORM\Column(type : 'string')]
-    private string $phone_number;
+    private string $phoneNumber;
 
     #[ORM\Column()]
-    private string $street_name;
+    private string $streetName;
 
     #[ORM\Column(type : 'integer')]
-    private int $postal_code;
+    private int $postalCode;
 
     #[ORM\Column()]
     private string $city;
@@ -94,55 +94,55 @@ class Hotel {
     }
 
     /**
-     * Get the value of phone_number
+     * Get the value of phoneNumber
      */
     public function getPhoneNumber(): string
     {
-        return $this->phone_number;
+        return $this->phoneNumber;
     }
 
     /**
-     * Set the value of phone_number
+     * Set the value of phoneNumber
      */
-    public function setPhoneNumber(string $phone_number): self
+    public function setPhoneNumber(string $phoneNumber): self
     {
-        $this->phone_number = $phone_number;
+        $this->phoneNumber = $phoneNumber;
 
         return $this;
     }
 
     /**
-     * Get the value of street_name
+     * Get the value of streetName
      */
     public function getStreetName(): string
     {
-        return $this->street_name;
+        return $this->streetName;
     }
 
     /**
-     * Set the value of street_name
+     * Set the value of streetName
      */
-    public function setStreetName(string $street_name): self
+    public function setStreetName(string $streetName): self
     {
-        $this->street_name = $street_name;
+        $this->streetName = $streetName;
 
         return $this;
     }
 
     /**
-     * Get the value of postal_code
+     * Get the value of postalCode
      */
     public function getPostalCode(): int
     {
-        return $this->postal_code;
+        return $this->postalCode;
     }
 
     /**
-     * Set the value of postal_code
+     * Set the value of postalCode
      */
-    public function setPostalCode(int $postal_code): self
+    public function setPostalCode(int $postalCode): self
     {
-        $this->postal_code = $postal_code;
+        $this->postalCode = $postalCode;
 
         return $this;
     }
