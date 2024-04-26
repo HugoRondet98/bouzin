@@ -15,6 +15,7 @@
       color: orange;
     }
   </style>
+      <link rel="stylesheet" href="styles.css" type="text/css" media="all">
 </head>
 
 <body>
@@ -55,16 +56,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item ">
-          <a class="nav-link <?php echo $ic; ?>" href="../insertion/Categories.php">insertion>Categories </a>
+          <a class="nav-link " href="../insertion/Categories.php">insertion>Categories </a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link <?php echo $ih; ?> " href="../insertion/Hotel.php">insertion>Hotel </a>
+          <a class="nav-link  " href="../insertion/Hotel.php">insertion>Hotel </a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link <?php echo $ir; ?> " href="../insertion/Room.php">insertion>Room </a>
+          <a class="nav-link  " href="../insertion/Room.php">insertion>Room </a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link <?php echo $is; ?>" href="../insertion/services.php">insertion>Services </a>
+          <a class="nav-link " href="../insertion/services.php">insertion>Services </a>
         </li>
 
         <a href="" class="test"></a>

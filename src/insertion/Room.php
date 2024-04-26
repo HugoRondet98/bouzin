@@ -16,7 +16,6 @@ $tableHotel = $hotelRepository->findAll();
 
 $categoriesRepository = $entityManager->getRepository(Categories::class);
 $tableCategories = $categoriesRepository->findAll();
-var_dump($tableCategories);
 
 // foreach ($tableHotel as $obj) {
 //     foreach ($dataPhpRoom as $object) {
@@ -27,3 +26,5 @@ var_dump($tableCategories);
 //     }
 // }
 // $entityManager->flush();
+
+include '../view/footer.php';
