@@ -1,17 +1,18 @@
-<?php 
+<?php
 
-$ic='active';
-$ih='';
-$ir='';
-$is='';
+$ic = 'active';
+$ih = '';
+$ir = '';
+$is = '';
 
 
 include 'header.php';
+
 use App\Classes\Categories;
 use Doctrine\ORM\EntityManager;
- 
-require_once dirname(__DIR__)."/../bootstrap.php";
-require_once dirname(__FILE__)."/jsonToPhp/index.php";
+
+require_once dirname(__DIR__) . "/../bootstrap.php";
+require_once dirname(__FILE__) . "/jsonToPhp/index.php";
 
 
 // foreach ($dataPhpCategories as $object) {
@@ -21,3 +22,5 @@ require_once dirname(__FILE__)."/jsonToPhp/index.php";
 //     $entityManager->persist($cat);
 // }
 // $entityManager->flush();
+
+include '../view/footer.php';

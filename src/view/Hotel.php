@@ -7,63 +7,86 @@ $service = '';
 include 'header.php'; ?>
 
 <style>
-nav.navbar.navbar-expand-lg.navbar-light.bg-light {
-    font-style: italic;
-}
-body {
-    text-align: center;
-}
-h1 {
-    font-family: arial, sans-serif;
-    font-size: xx-large;
-}
-form {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-}
-.form-select {
-    width: 35%;
-}
-select.form-select {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 5px 20px 10px;
-    margin-bottom: 20px;
-}
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+        font-style: italic;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    h1 {
+        font-family: arial, sans-serif;
+        font-size: xx-large;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .form-select {
+        width: 35%;
+    }
+
+    select.form-select {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 5px 20px 10px;
+        margin-bottom: 20px;
+    }
+
+    .mb-3.nb-chambre {
+        margin-bottom: 30px !important;
+    }
+
+    .mb-3.h-50 {
+        width: 540px;
+    }
+
+    textarea#exampleFormControlTextarea1 {
+        height: 100px;
+        resize: none;
+    }
+
+    body {
+        text-align: center;
+        background: hwb(48deg 88.32% 4.54%);
+    }
 </style>
 
 
 
 <form action="post.php" method="post">
     <h1>Ajout d'un Hotel</h1>
-    <div class="mb-3">
+    <div class="mb-3 w-25">
         <label for="exampleFormControlInput1" class="form-label">Nom</label>
         <input type="text" class="form-control" placeholder="Nom">
     </div>
-    <div class="mb-3">
+    <div class="mb-3 w-25">
         <label for="exampleFormControlInput1" class="form-label">Téléphone</label>
         <input type="tel" class="form-control" placeholder="Téléphone">
     </div>
-    <div class="mb-3">
+    <div class="mb-3 w-25">
         <label for="exampleFormControlInput1" class="form-label"> Adresse</label>
         <input type="text" class="form-control" placeholder="Adresse">
     </div>
-    <div class="mb-3">
+    <div class="mb-3 w-25">
         <label for="exampleFormControlInput1" class="form-label">Code Postal</label>
         <input type="number" class="form-control" placeholder="Code postal">
     </div>
-    <div class="mb-3">
+    <div class="mb-3 w-25">
         <label for="exampleFormControlInput1" class="form-label">Ville</label>
         <input type="text" class="form-control" placeholder="Ville">
     </div>
-    <div class="mb-3">
+    <div class="mb-3 w-25 nb-chambre">
         <label for="exampleFormControlInput1" class="form-label">Nombre de chambres</label>
         <input type="number" class="form-control" placeholder="Nombre de chambres">
     </div>

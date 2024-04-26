@@ -27,7 +27,7 @@ class Categories {
     // public function __construct(string $name, string $descriptionCategorie) {
     //     $this->name = $name;
     //     $this->descriptionCategorie = $descriptionCategorie;
-
+   
     // }
 
     // Method

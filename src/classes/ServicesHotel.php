@@ -1,17 +1,18 @@
 <?php
+
 namespace App\Classes;
 
-
-class ServicesHotel {
+class ServicesHotel
+{
 
     private int $hotel_id;
 
     private int $services_id;
 
-    public function __construct(int $hotel_id, int $services_id) {
+    public function __construct(int $hotel_id, int $services_id)
+    {
         $this->hotel_id = $hotel_id;
         $this->services_id = $services_id;
-
     }
 
 

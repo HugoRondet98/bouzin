@@ -10,9 +10,11 @@ include 'header.php';
 require_once dirname(__DIR__)."/../bootstrap.php";
 require_once dirname(__FILE__)."/jsonToPhp/index.php";
 
-/*foreach ($dataPhpServices as $object){
-    $serv = new Services($object->name, $object->description);
-    $entityManager->persist($serv);
-}
-    $entityManager->flush();
-*/
+// foreach ($dataPhpServices as $object){
+//     $serv = new Services($object->name, $object->description);
+//     var_dump($serv);
+//     $entityManager->persist($serv);
+// }
+// $entityManager->flush();
+
+include '../view/footer.php';
