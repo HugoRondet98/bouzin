@@ -14,6 +14,22 @@
     a.nav-link:hover {
       color: orange;
     }
+
+/* Cartes page d'accueil */
+
+.card {
+    margin: 0px 30px 30px;
+    background: aliceblue;
+}
+
+.cartes-hotels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
   </style>
       <link rel="stylesheet" href="styles.css" type="text/css" media="all">
 </head>
@@ -40,7 +56,7 @@
           <a class="nav-link " href="../view/room.php">Chambres</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="../view/service.php">Services</a>
+          <a class="nav-link " href="../view/services.php">Services</a>
         </li>
       </ul>
     </div>

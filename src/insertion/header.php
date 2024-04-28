@@ -40,7 +40,7 @@
           <a class="nav-link " href="../view/room.php">Chambres</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="../view/service.php">Services</a>
+          <a class="nav-link " href="../view/services.php">Services</a>
         </li>
       </ul>
     </div>

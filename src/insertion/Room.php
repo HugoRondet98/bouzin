@@ -11,6 +11,7 @@ use App\Classes\Room;
 require_once dirname(__DIR__) . "/../bootstrap.php";
 require_once dirname(__FILE__) . "/jsonToPhp/index.php";
 include 'header.php';
+
 $hotelRepository = $entityManager->getRepository(Hotel::class);
 $tableHotel = $hotelRepository->findAll();
 

@@ -38,14 +38,14 @@ class Hotel {
 
 
 // Constructor
-    /*public function __construct(string $name, int $phoneNumber, string $streetName, int $postalCode, string $city) {
+    public function __construct(string $name, string $phoneNumber, string $streetName, int $postalCode, string $city) {
         $this->name = $name;
         $this->phoneNumber = $phoneNumber;
         $this->streetName = $streetName;
         $this->postalCode = $postalCode;
         $this->city = $city;
     }
-    */
+    
 
     
     // Method
