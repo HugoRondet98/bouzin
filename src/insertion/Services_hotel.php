@@ -14,9 +14,9 @@ $categoriesRepository = $entityManager->getRepository(ServicesHotel::class);
 $tableServicesHotel = $categoriesRepository->findAll();
 
 
-foreach ($tableServicesHotel as $object){
-    $serv = new ServicesHotel($object->hotel_id, $object->services_id);
-    var_dump($serv);
-    // $entityManager->persist($serv);
-}
-// $entityManager->flush();
+// foreach ($tableServicesHotel as $object){
+//     $serv = new ServicesHotel($object->hotel_id, $object->services_id);
+//     var_dump($serv);
+//      $entityManager->persist($serv);
+// }
+//  $entityManager->flush();

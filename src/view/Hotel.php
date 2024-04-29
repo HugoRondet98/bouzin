@@ -4,94 +4,54 @@ $cat = '';
 $hot = 'active';
 $room = '';
 $service = '';
-include 'header.php'; ?>
+include 'header.php';
+include 'bdd.php';
 
-<style>
-    nav.navbar.navbar-expand-lg.navbar-light.bg-light {
-        font-style: italic;
-    }
+//////////////////
+if(!empty($_POST)){
 
-    body {
-        text-align: center;
-    }
+    require_once'bdd.php';  
+    $req=$pdo->prepare("INSERT INTO hotel SET name=?,phoneNumber=?,streetName=?,postalCode=?,city=?");
+    $req->execute([$_POST['name'],$_POST['phoneNumber'],$_POST['streetName'],$_POST['postalCode'],$_POST['city']]);
+     header('location:index.php');  
 
-    h1 {
-        font-family: arial, sans-serif;
-        font-size: xx-large;
-    }
-
-    form {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .form-select {
-        width: 35%;
-    }
-
-    select.form-select {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        padding: 5px 5px 20px 10px;
-        margin-bottom: 20px;
-    }
-
-    .mb-3.nb-chambre {
-        margin-bottom: 30px !important;
-    }
-
-    .mb-3.h-50 {
-        width: 540px;
-    }
-
-    textarea#exampleFormControlTextarea1 {
-        height: 100px;
-        resize: none;
-    }
-
-    body {
-        text-align: center;
-        background: hwb(48deg 88.32% 4.54%);
-    }
-</style>
+}
 
 
+?>
+    <!-- ////////////////////// -->
 
-<form action="post.php" method="post">
-    <h1>Ajout d'un Hotel</h1>
+    
+<h1>Ajout d'un Hotel</h1>
+<form action="" method="post">
+    
     <div class="mb-3 w-25">
         <label for="exampleFormControlInput1" class="form-label">Nom</label>
-        <input type="text" class="form-control" placeholder="Nom">
+        <input type="text" class="form-control" placeholder="Nom" name="name">
     </div>
     <div class="mb-3 w-25">
         <label for="exampleFormControlInput1" class="form-label">Téléphone</label>
-        <input type="tel" class="form-control" placeholder="Téléphone">
+        <input type="tel" class="form-control" placeholder="Téléphone" name="phoneNumber">
     </div>
     <div class="mb-3 w-25">
         <label for="exampleFormControlInput1" class="form-label"> Adresse</label>
-        <input type="text" class="form-control" placeholder="Adresse">
+        <input type="text" class="form-control" placeholder="Adresse" name="streetName">
     </div>
     <div class="mb-3 w-25">
         <label for="exampleFormControlInput1" class="form-label">Code Postal</label>
-        <input type="number" class="form-control" placeholder="Code postal">
+        <input type="number" class="form-control" placeholder="Code postal" name="postalCode">
     </div>
     <div class="mb-3 w-25">
         <label for="exampleFormControlInput1" class="form-label">Ville</label>
-        <input type="text" class="form-control" placeholder="Ville">
-    </div>
+        <input type="text" class="form-control" placeholder="Ville" name="city">
+    </div> 
+        
     <div class="mb-3 w-25 nb-chambre">
         <label for="exampleFormControlInput1" class="form-label">Nombre de chambres</label>
-        <input type="number" class="form-control" placeholder="Nombre de chambres">
+        <input type="number" class="form-control" placeholder="Nombre de chambres" name="">
     </div>
 
-    <!-- Choix services -->
+    Choix services 
     <select class="form-select" aria-label="Default select example" multiple>
         <option selected>Services</option>
         <option value="1">Piscine</option>
@@ -103,7 +63,7 @@ include 'header.php'; ?>
         <option value="7">Blanchisserie</option>
         <option value="8">Location de films</option>
     </select>
-    <!-- Choix catégories -->
+    Choix catégories 
     <select class="form-select" aria-label="Default select example" multiple>
 
         <option selected>Catégories</option>
@@ -118,11 +78,12 @@ include 'header.php'; ?>
         <option value="9">Prestige</option>
     </select>
 
-    <!-- description catégorie -->
+   description catégorie
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Merci de décrire les catégories de vos chambres</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Description catégorie"></textarea>
     </div>
+     
     <div class="col-12">
         <button class="btn btn-primary" type="submit">Ajouter</button>
     </div>
