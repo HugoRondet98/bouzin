@@ -38,7 +38,7 @@ class Hotel {
   //////////////????????????///////////////////
         // private int $nbChambre;
         // private Collection $catList;
-        // private string $description;
+        // private string $descriptionService;
 
 // Constructor
     public function __construct(string $name, string $phoneNumber, string $streetName, int $postalCode, string $city) {

@@ -9,16 +9,36 @@
 
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    .comparaison {
-      width: 60%;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-    }
-
     .active {
-      border-bottom: 2px solid orange !important;
+      border-bottom: 2px solid orange
     }
+ 
+    a.nav-link:hover {
+      color: orange;
+    }
+ 
+/* Cartes page d'accueil */
+ 
+.card {
+    margin: 0px 30px 30px;
+    background: aliceblue;
+}
+ 
+.cartes-hotels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ 
+.choix-multiples {
+  text-align: left;
+}
+ 
+button, input, optgroup, select, textarea {
+  margin-right: 10px;
+}
+ 
   </style>
 </head>
 

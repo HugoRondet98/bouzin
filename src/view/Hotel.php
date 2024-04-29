@@ -51,32 +51,35 @@ if(!empty($_POST)){
         <input type="number" class="form-control" placeholder="Nombre de chambres" name="">
     </div>
 
-    Choix services 
-    <select class="form-select" aria-label="Default select example" multiple>
-        <option selected>Services</option>
-        <option value="1">Piscine</option>
-        <option value="2">Spa</option>
-        <option value="3">Restaurant</option>
-        <option value="4">Salle de sport</option>
-        <option value="5">Yoga</option>
-        <option value="6">Vélo</option>
-        <option value="7">Blanchisserie</option>
-        <option value="8">Location de films</option>
-    </select>
-    Choix catégories 
-    <select class="form-select" aria-label="Default select example" multiple>
 
-        <option selected>Catégories</option>
-        <option value="1">Standard</option>
-        <option value="2">Confort</option>
-        <option value="3">Maxi</option>
-        <option value="4">Luxe</option>
-        <option value="5">Royal Maxi</option>
-        <option value="6">Deluxe-prestige</option>
-        <option value="7">Palace deluxe</option>
-        <option value="8">Impérial</option>
-        <option value="9">Prestige</option>
-    </select>
+  <!-- Choix services -->
+  <div class="choix-multiples">
+    <p><strong>Choissisez le(s) service(s) proposé(s) par l'hôtel : </strong></p>
+        <label><input type="checkbox" name="24" id="1" value="film">Piscine</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Spa</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Restaurant</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Salle de sport</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Yoga</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Vélo</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Blanchisserie</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Location de films</label><br><br>
+    </div>
+    <!-- Choix catégories -->
+ 
+    <div class="choix-multiples">
+    <p><strong>Choissisez le(s) catégorie(s) proposé(s) par l'hôtel :</strong></p>
+        <label><input type="checkbox" name="24" id="1" value="film">Standard</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Confort</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Maxi</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Luxe</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Royal Maxi</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Deluxe prestige</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Impérial</label><br>
+        <label><input type="checkbox" name="24" id="1" value="film">Prestige</label><br><br>
+    </div>
+
+
+
 
    description catégorie
     <div class="mb-3">
