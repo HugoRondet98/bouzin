@@ -1,9 +1,5 @@
 <?php
-$ac='';
-$cat='active';
-$hot='';
-$room='';
-$service='';
+
 
 include 'header.php'; ?>
  

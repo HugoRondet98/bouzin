@@ -1,9 +1,4 @@
 <?php
-$ac = '';
-$cat = '';
-$hot = 'active';
-$room = '';
-$service = '';
 include 'headerlog.php';
 include 'bdd.php';
 

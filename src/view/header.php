@@ -7,38 +7,11 @@
   <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="CSS/styles.css">
   <style>
-    .active {
-      border-bottom: 2px solid orange
-    }
- 
-    a.nav-link:hover {
-      color: orange;
-    }
     
-/* Cartes page d'accueil */
- 
-.card {
-    margin: 0px 30px 30px;
-    background: aliceblue;
-}
- 
-.cartes-hotels {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
- 
-.choix-multiples {
-  text-align: left;
-}
- 
-button, input, optgroup, select, textarea {
-  margin-right: 10px;
-}
- 
+
+   
   </style>
 </head>
 
@@ -57,7 +30,7 @@ button, input, optgroup, select, textarea {
         <!-- <li class="nav-item">
           <a class="nav-link " href="../view/categories.php">Catégories</a>
         </li> -->
-       <!--  <li class="nav-item">
+        <!--  <li class="nav-item">
           <a class="nav-link " href="../view/hotel.php">Ajout d'un 'Hôtel</a>
         </li> -->
         <!-- <li class="nav-item">
@@ -76,5 +49,3 @@ button, input, optgroup, select, textarea {
       </ul>
     </div>
   </nav>
-
-

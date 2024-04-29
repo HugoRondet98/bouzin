@@ -1,6 +1,6 @@
 /*home*/
 *{
-  padding: 0;margin: 0;box-sizing: border-box;
+  padding: 0;margin: 0;box-sizing: border-box;text-decoration: none;list-style-type: none;  
    
 }
 .card {
@@ -15,14 +15,7 @@
 }
  
 /* HEADER */
-.bg-light {
-  --bs-bg-opacity: 1;
- /* background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
-  border-bottom: 1px solid white;
-  background: linear-gradient(#4cb6ff73, #edf8ff);*/
-  background: hwb(49 20% 74% / 1)!important;
-}
- 
+
  
 .bg-light a.nav-link{
   color: white;
@@ -150,4 +143,55 @@ textarea#exampleFormControlTextarea1 {
   margin-top: 30px;
   background: #8a815c;
   border: none;
+}
+/*connexion*/
+.erreur {
+  margin: 0 auto;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+}
+/*---------pagination*/
+.pagination {
+  width: 60% !important;
+  margin: 0 auto !important;
+  
+  display: flex;
+  justify-content: center;
+}
+.active {
+  border-bottom: 2px solid orange
+}
+
+a.nav-link:hover {
+  color: orange;
+}
+
+/* Cartes page d'accueil */
+
+.card {
+  margin: 0px 30px 30px;
+  background: aliceblue;
+}
+
+.cartes-hotels {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.choix-multiples {
+  text-align: left;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin-right: 10px;
 }

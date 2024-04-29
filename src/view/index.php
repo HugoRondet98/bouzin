@@ -1,24 +1,34 @@
 <?php
-$ac = 'active';
-$cat = '';
-$hot = '';
-$room = '';
-$service = '';
+
+use App\Classes\Hotel;
+
 include 'header.php';
 include 'bdd.php';
 //////////////////////////////
+///////////////pagination////////////////////////////////
 
+$perPages = 6;
+
+$currentPage=(int)$_GET['page'] ?? 1 ?:1;
+
+$offset = $perPages * ($currentPage-1);
+
+$query=$pdo->query('SELECT * FROM hotel LIMIT'.$perPages.'OFFSET '.$offset);
+
+$count = (int)$pdo->query('SELECT COUNT(id) FROM hotel LIMIT 1')->fetch(PDO::FETCH_NUM)[0];
+
+$pages= ceil($count/$perPages);
+
+$hotels= $query->fetchAll(PDO::FETCH_CLASS, Hotel::class);
+
+//////////////////////////////////////////////////////////////////
 ?>
-
-
-
-
 <main>
     <h1>Bouzin's Land</h1>
     <?php
 
     ////////////////////////////////
-    $sql =  'SELECT name,phoneNumber,streetName,postalCode,city FROM hotel ';
+    $sql =  'SELECT name,phoneNumber,streetName,postalCode,city FROM hotel LIMIT 6';
     $req = $pdo->query($sql); ?>
     <div class="cartes-hotels">
         <?php while ($tableau = $req->fetch(PDO::FETCH_OBJ)) { ?>
@@ -43,5 +53,15 @@ include 'bdd.php';
      
     </div>
 </main>
+<nav class="pagination" aria-label="Page navigation example">
 
+  <?php if($currentPage>1): ?>
+    <a href="index.php?page=<?php $currentPage-1?>" class="btn btn-primary">précédente</a>
+    <?php endif ?>
+
+  <?php if($currentPage<$pages): ?>
+    <a href="index.php?page=<?php $currentPage+1?>" class="btn btn-primary">suivante</a>
+  <?php endif ?>
+
+</nav>
 <?php include 'footer.php';

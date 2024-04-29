@@ -1,4 +1,8 @@
-<?php include 'header.php'; ?>
+<?php
+
+use App\Classes\Hotel;
+
+ include 'header.php'; ?>
 
 <h1>Connexion test</h1>
 <?php
@@ -22,7 +26,7 @@ if (!empty($_POST)) {
 
     $pdoStatement = $pdo->prepare($sql);
     if ($pdoStatement) {
-        $pdoStatement->execute(['val' => $name]);// transforme le motif
+        $pdoStatement->execute(['val' => $name]); // transforme le motif
         $result = $pdoStatement->fetch();
         // on veut comparer le mot de passe saisie depuis le formulaire avec
         // le mot de passe haché récupéré depuis la base de données
@@ -30,19 +34,34 @@ if (!empty($_POST)) {
         //var_dump($result);
         if ($result) {
             if (password_verify($password, $result->password)) {
+                echo "<div class=\"alert alert-success\" role=\"alert\">Connexion réussie</div>";
 
+                sleep(1);
                 header('location:hotel.php');
             } else {
-                echo "Mot de passe invalide <br>";
+                $errors['password']="Mot de passe invalide";
             }
         } else {
-            echo 'l\'utilisateur n\'existe pas';
+            $errors['name'] = "Identifiant invalide";
         }
-
     }
 }
-?>
 
+
+
+?>
+<?php if (!empty($errors)) : ?>
+    <div class="erreur">
+        <div class="alert alert-secondary" role="alert">
+            Vous n'avez pas rempli le formulaire correctement
+        </div>
+        
+            <?php foreach ($errors as $error) : ?>
+               <div><?php echo "<div class=\"alert alert-danger\" role=\"alert\">$error</div>"; ?></div>
+            <?php endforeach; ?>
+        
+    </div>
+<?php endif; ?>
 <form action="" method="post">
     <div class="form-floating mb-3">
         <input type="text" class="form-control" id="floatingInput" placeholder="nom" name="name">
