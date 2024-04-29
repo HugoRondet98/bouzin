@@ -57,9 +57,9 @@ button, input, optgroup, select, textarea {
         <!-- <li class="nav-item">
           <a class="nav-link " href="../view/categories.php">Catégories</a>
         </li> -->
-       <!--  <li class="nav-item">
-          <a class="nav-link " href="../view/hotel.php">Ajout d'un 'Hôtel</a>
-        </li> -->
+       <li class="nav-item">
+          <a class="nav-link " href="../view/hotel.php">Ajout d'un Hôtel</a>
+        </li> 
         <!-- <li class="nav-item">
           <a class="nav-link " href="../view/room.php">Chambres</a>
         </li>
