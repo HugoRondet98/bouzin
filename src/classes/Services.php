@@ -28,15 +28,18 @@ class Services {
         $this->name = $name;
         $this->descriptionService = $descriptionService;
     }
-
+       
     // Method
 
-
-
-
-
     // Setter & Getter
-
+    public function getId(): int {
+        return $this->id;
+    }
+    
+    public function setHotelList(Collection $hotelList) {
+        $this->hotelList = $hotelList;
+    }
+    
     /**
      * Get the value of name
      */

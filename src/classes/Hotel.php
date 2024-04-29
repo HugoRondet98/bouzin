@@ -47,11 +47,18 @@ class Hotel {
     
     // Method
 
-
-
-
-
     // Setter & Getter
+    public function getId(): int {
+        return $this->id;
+    }
+
+    public function setServiceList(Collection $serviceList) {
+        $this->serviceList = $serviceList;
+    }
+
+    public function setRoomList(Collection $roomList) {
+        $this->roomList = $roomList;
+    }
 
     /**
      * Get the value of name

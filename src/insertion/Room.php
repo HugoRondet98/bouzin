@@ -18,12 +18,12 @@ $tableHotel = $hotelRepository->findAll();
 $categoriesRepository = $entityManager->getRepository(Categories::class);
 $tableCategories = $categoriesRepository->findAll();
 
-foreach ($tableHotel as $hot) {
-    foreach ($dataPhpRoom as $object){
-        $randomId = rand(0, count($tableCategories)-1);
-        $cat = $tableCategories[$randomId];
-        $rompich = new Room($object->name, $object->numero, $cat, $hot);
-        $entityManager->persist($rompich);
-    }
-}
-$entityManager->flush();
+// foreach ($tableHotel as $hot) {
+//     foreach ($dataPhpRoom as $object){
+//         $randomId = rand(0, count($tableCategories)-1);
+//         $cat = $tableCategories[$randomId];
+//         $rompich = new Room($object->name, $object->numero, $cat, $hot);
+//         $entityManager->persist($rompich);
+//     }
+// }
+// $entityManager->flush();

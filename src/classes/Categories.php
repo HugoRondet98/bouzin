@@ -30,10 +30,6 @@ class Categories {
 
     // Method
 
-
-
-
-
     // Setter & Getter
     
     /**

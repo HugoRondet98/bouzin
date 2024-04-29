@@ -35,10 +35,6 @@ class Room {
 
     // Method
 
-
-
-
-    
     // Setter & Getter
 
     /**
