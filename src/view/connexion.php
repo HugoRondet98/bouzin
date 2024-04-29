@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-<h1>Connexion</h1>
+<h1>Connexion test</h1>
 
 
 
