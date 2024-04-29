@@ -4,7 +4,7 @@ $cat = '';
 $hot = 'active';
 $room = '';
 $service = '';
-include 'header.php';
+include 'headerlog.php';
 include 'bdd.php';
 
 //////////////////
@@ -81,7 +81,6 @@ if(!empty($_POST)){
 
 
 
-   <!--description catégorie-->
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label"><strong>Merci de décrire les catégories de vos chambres</strong></label>
         <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Description catégorie"></textarea>

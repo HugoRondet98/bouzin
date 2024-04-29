@@ -15,17 +15,14 @@ class Admin {
 
     #[ORM\Column()]
     private string $name;
-    #[ORM\Column()]
-    private string $lastname;
 
-    #[ORM\Column(type : 'string')]
-    private int $password;
+    #[ORM\Column()]
+    private string $lastName;
+
+    #[ORM\Column()]
+    private  $password;
 
 }
 
-/*
-INSERT INTO admin (name, lastname, password) VALUES ('hugo', 'rondet', 'bouzin');
-INSERT INTO admin (name, lastname, password) VALUES ('hugo', 'cuenot', 'bouzin');
-INSERT INTO admin (name, lastname, password) VALUES ('maeva', 'bouvard', 'bouzin');
-INSERT INTO admin (name, lastname, password) VALUES ('alexis', 'nauleau', 'bouzin');
-*/
+
+
