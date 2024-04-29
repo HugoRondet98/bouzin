@@ -15,7 +15,7 @@ class Hotel {
     private int $id;
 
     #[ORM\Column()]
-    private string $name;
+    private string $name; 
 
     #[ORM\Column(type : 'string')]
     private string $phoneNumber;
@@ -35,17 +35,21 @@ class Hotel {
     #[ORM\ManyToMany(targetEntity : Services ::class, inversedBy : 'hotelList')]
     #[JoinTable(name: 'service_hotel')]
     private Collection $serviceList;
-
+  //////////////????????????///////////////////
+        // private int $nbChambre;
+        // private Collection $catList;
+        // private string $descriptionService;
 
 // Constructor
-    /*public function __construct(string $name, int $phoneNumber, string $streetName, int $postalCode, string $city) {
+    public function __construct(string $name, string $phoneNumber, string $streetName, int $postalCode, string $city) {
         $this->name = $name;
         $this->phoneNumber = $phoneNumber;
         $this->streetName = $streetName;
         $this->postalCode = $postalCode;
         $this->city = $city;
+      
     }
-    */
+    
 
     
     // Method

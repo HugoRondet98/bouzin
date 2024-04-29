@@ -7,15 +7,9 @@
   <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
-    .active {
-      border-bottom: 2px solid orange
-    }
 
-    a.nav-link:hover {
-      color: orange;
-    }
   </style>
-      <link rel="stylesheet" href="../view/styles.css" type="text/css" media="all">
+      <link rel="stylesheet" href="../view/css/styles.css" type="text/css" media="all">
 </head>
 
 <body>
@@ -40,8 +34,16 @@
           <a class="nav-link " href="../view/room.php">Chambres</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="../view/service.php">Services</a>
+          <a class="nav-link " href="../view/services.php">Services</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="../view/CompareHotels.php">Comparer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="../view/ModifyRoom.php">Modifier</a>
+        </li>
+
       </ul>
     </div>
   </nav>

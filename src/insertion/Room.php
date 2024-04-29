@@ -27,4 +27,3 @@ $tableCategories = $categoriesRepository->findAll();
 // }
 // $entityManager->flush();
 
-include '../view/footer.php';
